@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.davidgarcia.controller.ServiciosHasEmpleadosController">
+   <children>
+      <ImageView fitHeight="503.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FondoServiciosHasEmpleados.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblServiciosHasEmpleados" layoutX="23.0" layoutY="268.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="214.0" prefWidth="655.0" style="-fx-background-color: #34b090;">
+        <columns>
+          <TableColumn fx:id="colCodigoEvento" prefWidth="97.0" text="Código Evento" />
+          <TableColumn fx:id="colCodigoServicio" prefWidth="104.0" text="Código Servicio" />
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="110.0" text="Código Empleado" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="163.0" text="Lugar Evento" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="91.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" prefWidth="89.0" text="Hora Evento" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtCodigoEvento" editable="false" layoutX="183.0" layoutY="95.0" promptText="Automático" />
+      <TextField fx:id="txtLugarEvento" editable="false" layoutX="183.0" layoutY="173.0" promptText="Escriba el lugar del evento" />
+      <TextField fx:id="txtHoraEvento" editable="false" layoutX="183.0" layoutY="134.0" promptText="HH:mm:ss" />
+      <GridPane fx:id="grpFechaEvento" disable="true" layoutX="463.0" layoutY="174.0" prefHeight="25.0" prefWidth="149.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="352.0" layoutY="178.0" text="Fecha Evento:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="140.0" text="Hora Evento:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="178.0" text="Lugar Evento:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" disable="true" layoutX="463.0" layoutY="95.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoEmpleado" disable="true" layoutX="463.0" layoutY="135.0" prefWidth="150.0" />
+      <Label layoutX="82.0" layoutY="100.0" text="Código Evento: " textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="100.0" text="Código Servicio:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="352.0" layoutY="139.0" text="Código Empleado:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="14.0" onMouseClicked="#entidadesDeUnion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FlechaRegreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="74.0" layoutX="619.0" layoutY="18.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TK3Blanco.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="152.0" layoutY="227.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #277e6f;" text="Nuevo" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="257.0" layoutY="227.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #277e6f;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="360.0" layoutY="227.0" mnemonicParsing="false" onAction="#editar" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #277e6f;" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="463.0" layoutY="227.0" mnemonicParsing="false" onAction="#reporte" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #277e6f;" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

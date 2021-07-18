@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.davidgarcia.controller.ServiciosHasPlatosController">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="613.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FondoServicioHasPlatos.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="23.0" layoutY="213.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="178.0" prefWidth="563.0" style="-fx-background-color: #34b090;">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="274.0" text="Código Servicio" />
+          <TableColumn fx:id="colCodigoPlato" prefWidth="288.0" text="Código Plato" />
+        </columns>
+      </TableView>
+      <Label layoutX="166.0" layoutY="176.0" text="Código Servicio:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font></Label>
+      <Label layoutX="166.0" layoutY="139.0" text="Código Plato:" textFill="WHITE">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="290.0" layoutY="172.0" prefHeight="25.0" prefWidth="156.0" />
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="290.0" layoutY="136.0" prefHeight="25.0" prefWidth="156.0" />
+      <ImageView fitHeight="61.0" fitWidth="83.0" layoutX="514.0" layoutY="22.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TK3Blanco.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="20.0" onMouseClicked="#entidadesDeUnion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FlechaRegreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

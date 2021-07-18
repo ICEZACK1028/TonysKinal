@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.davidgarcia.controller.ModulosController">
+   <children>
+      <ImageView fitHeight="425.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FondoModulos.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="300.0" prefHeight="36.0" prefWidth="125.0" text="Empresas" textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="74.0" layoutX="25.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FlechaRegreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="201.0" layoutY="299.0" prefHeight="36.0" prefWidth="96.0" text="Tipo de " textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="333.0" prefHeight="36.0" prefWidth="66.0" text="Plato" textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="333.0" prefHeight="36.0" prefWidth="125.0" text="Empleado" textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="72.0" fitWidth="87.0" layoutX="539.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TK3Blanco.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgEmpresas" fitHeight="135.0" fitWidth="125.0" layoutX="35.0" layoutY="166.0" onMouseClicked="#empresa" onMouseEntered="#insertarImagen" onMouseExited="#devolverImagen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/empresa.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgTipoDePlato" fitHeight="135.0" fitWidth="125.0" layoutX="335.0" layoutY="166.0" onMouseClicked="#tipoPlato" onMouseEntered="#insertarImagen3" onMouseExited="#devolverImagen3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/tipo%20de%20plato.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgTipoDeEmpleado" fitHeight="135.0" fitWidth="125.0" layoutX="185.0" layoutY="166.0" onMouseClicked="#tipoEmpleado" onMouseEntered="#insertarImagen2" onMouseExited="#devolverImagen2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/tipoEmpleado.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="351.0" layoutY="299.0" prefHeight="36.0" prefWidth="96.0" text="Tipo de" textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgProductos" fitHeight="135.0" fitWidth="125.0" layoutX="485.0" layoutY="166.0" onMouseClicked="#producto" onMouseEntered="#insertarImagen4" onMouseExited="#devolverImagen4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/producto.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="485.0" layoutY="299.0" prefHeight="36.0" prefWidth="125.0" text="Productos" textFill="WHITE">
+         <font>
+            <Font name="Century" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

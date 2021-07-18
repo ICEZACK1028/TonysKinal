@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="425.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.davidgarcia.controller.EntidadesDeUnionController">
+   <children>
+      <ImageView fitHeight="425.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FondoEntidadesDeUnion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="67.0" layoutX="7.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FlechaRegreso.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgServiciosHasEmpleados" fitHeight="135.0" fitWidth="135.0" layoutX="70.0" layoutY="175.0" onMouseClicked="#serviciosHasEmpleados" onMouseEntered="#insertarImagen" onMouseExited="#devolverImagen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/serviciosHasEmpleados.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="62.0" layoutY="310.0" text="Servicios Has" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="337.0" prefHeight="30.0" prefWidth="124.0" text="Empleados" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="84.0" layoutX="537.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/TK3Blanco.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgServiciosHasPlatos" fitHeight="135.0" fitWidth="135.0" layoutX="250.0" layoutY="175.0" onMouseClicked="#serviciosHasPlatos" onMouseEntered="#insertarImagen2" onMouseExited="#devolverImagen2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/serviciosHasPlatos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="242.0" layoutY="310.0" text="Servicios Has" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="337.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgProductosHasPlatos" fitHeight="135.0" fitWidth="135.0" layoutX="430.0" layoutY="175.0" onMouseClicked="#productosHasPlatos" onMouseEntered="#insertarImagen3" onMouseExited="#devolverImagen3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/productosHasPlatos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="417.0" layoutY="310.0" text="Productos Has" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="463.0" layoutY="337.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Century" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

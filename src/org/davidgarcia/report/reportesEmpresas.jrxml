@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportesEmpresas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46c5e43a-95a8-4ef0-a822-1173abfa9be9">
+	<property name="ireport.zoom" value="1.2100000000000029"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="380"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresa;]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="555" height="802" uuid="5ef87a99-3231-44c9-97d2-7a8bf32712b2"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\FondoHojaMembretada.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="436" y="95" width="119" height="25" forecolor="#006666" uuid="02a25e0b-17f1-40dc-9510-7699a7d67451"/>
+				<textElement>
+					<font fontName="Century" size="16" isBold="true" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="131" uuid="4158a0cd-ef29-41d6-8e6a-37b9819ce420"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\Encabezado.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="0" width="384" height="43" uuid="8bba2109-d476-4245-9074-ad0b5dd2ea14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century" size="27" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPRESAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="40" forecolor="#006666" uuid="4ee84f82-770b-48ee-adf5-eb20c8e57b25"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="158" y="10" width="112" height="20" uuid="4eb33942-91b7-41b7-9314-a73e2064f7b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="10" width="114" height="20" uuid="4df26974-9881-4fc8-9bcf-90fe7065ce57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="10" width="100" height="20" uuid="01cacd5e-dfcc-4e45-ab16-e43df2c89666"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="10" width="83" height="20" uuid="cac33a0b-974f-4315-919c-005da5db439c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="117" y="0" width="193" height="20" uuid="21eed21f-eebc-486e-975f-4db0725eda46"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="0" width="59" height="20" uuid="399e8ab0-b827-44ee-a098-f1f92b109144"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" forecolor="#006666" uuid="6ab36497-9cc7-4669-8000-f546d052948e"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="320" y="0" width="141" height="20" uuid="a3fb8457-7dcf-48bf-9d7c-d2a6b2d5efc5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="0" width="83" height="20" uuid="ae6483c9-9ad5-4b98-8c68-319d0237a839"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="68" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="68" uuid="de8b494d-6060-4f75-a5fc-d65087638a28"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\PieReporte.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="175">
+			<image>
+				<reportElement x="375" y="135" width="180" height="40" uuid="c706d2dd-296f-470d-87d2-fc510493072f"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\Telefono1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="188" y="135" width="180" height="40" uuid="fc5b8957-2726-45b0-bcda-d54443f7e676"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\Direccion1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="135" width="180" height="40" uuid="50b71bf0-2430-4f60-923a-5d2cc0863b54"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\Correo1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="436" y="139" width="90" height="32" forecolor="#FFFFFF" backcolor="#1F9898" uuid="e5b65070-e4fa-4f3f-af84-f6f8f9331a28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[2216 0000 - 2387 7600]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="91" width="98" height="21" uuid="e014ba05-6b40-4cf3-9290-a417806cc7f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century" size="10"/>
+				</textElement>
+				<text><![CDATA[David García]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="140" width="123" height="31" forecolor="#FFFFFF" uuid="f255302d-1003-41df-9fab-ee4bbef5554e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[6ta. av. 13-54 Zona 7 Col. Landivar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="106" width="100" height="20" uuid="185bd160-f807-48ad-bab5-e349d9b2f109"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century" size="10"/>
+				</textElement>
+				<text><![CDATA[Gerente General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="138" width="120" height="32" forecolor="#FFFFFF" uuid="5cc2ec83-b1d4-45ab-b738-c3ae8c4f61b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[info@kinal.org.gt]]></text>
+			</staticText>
+			<line>
+				<reportElement x="203" y="90" width="144" height="1" uuid="4381cb08-a6f1-4b95-8227-61ebe48de713"/>
+			</line>
+			<image>
+				<reportElement x="219" y="38" width="117" height="68" uuid="200d3cc2-bd28-42ce-a6f3-a3b61f97aab0"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019257\\src\\org\\davidgarcia\\img\\Firma.png"]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
+</jasperReport>
